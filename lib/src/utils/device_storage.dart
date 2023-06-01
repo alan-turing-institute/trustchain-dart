@@ -12,4 +12,10 @@ class Storage {
     final path = await _localPath;
     return File('$path/.trustchain/operations/$fileName');
   }
+
+  static Future<File> readTrustchainDidJWK(String did) async {
+    final path = await _localPath;
+    return File('$path/.trustchain/key_manager/$did/signing_key.json');
+  }
+
 }
