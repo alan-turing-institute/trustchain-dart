@@ -11,6 +11,9 @@ dependencies:
   uuid: ^3.0.6
   flutter_rust_bridge: ^1.64.0
   path_provider: ^2.0.15
+  flutter:
+    sdk: flutter
+  google_fonts: ^4.0.0
 
 dev_dependencies:
   lints: ^2.0.0
