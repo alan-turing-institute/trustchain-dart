@@ -12,6 +12,7 @@ enum FfiError {
   failedToAttestdDID("dDID Attest Error"),
   failedToResolveDID("DID Resolve Error"),
   failedToVerifyDID("DID Verify Error"),
+  failedToVerifyCredential("DID Verify Credential Error"),
 
   unrecognisedFfiExceptionCode("No FFiError enum varient implimented for this exception code");
 
