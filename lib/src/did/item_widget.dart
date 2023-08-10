@@ -18,18 +18,18 @@ class DocumentItemWidget extends StatelessWidget {
         children: <Widget>[
           TooltipText(
             text: label,
-            style: Theme.of(context)
-                .textTheme
-                .overline!
-                .apply(color: UiKit.palette.credentialText.withOpacity(0.6)),
+            // style: Theme.of(context)
+            //     .textTheme
+                // .overline!
+                // .apply(color: UiKit.palette.credentialText.withOpacity(0.6)),
           ),
           const SizedBox(height: 2.0),
           TooltipText(
             text: value,
-            style: Theme.of(context)
-                .textTheme
-                .caption!
-                .apply(color: UiKit.palette.credentialText),
+            // style: Theme.of(context)
+            //     .textTheme
+            //     .caption!
+            //     .apply(color: UiKit.palette.credentialText),
             maxLines: null,
             softWrap: true,
           ),

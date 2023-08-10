@@ -1,4 +1,4 @@
-import 'package:trustchain_dart/trustchain_dart.dart';
+import 'package:trustchain_dart/src/did/did.dart';
 import 'package:test/test.dart';
 import 'dart:io';
 import 'dart:convert';

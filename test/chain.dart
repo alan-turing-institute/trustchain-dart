@@ -1,12 +1,16 @@
 import 'dart:io';
 import 'dart:convert';
-import 'package:trustchain_dart/trustchain_dart.dart';
+import 'package:trustchain_dart/src/chain/chain.dart';
+import 'package:trustchain_dart/src/did/did.dart';
 import 'package:test/test.dart';
 
 // import 'package:http/http.dart' as http;
 
+final httpDidChainExample =
+  jsonDecode(File('test/data/http_resolved_chain_example.json').readAsStringSync());
+
 final didChainExample =
-    jsonDecode(File('test/data/chain_example.json').readAsStringSync());
+  jsonDecode(File('test/data/chain_example.json').readAsStringSync());
 
 void chainTest() {
   group('DIDChainModel', () {
@@ -28,9 +32,14 @@ void chainTest() {
     });
 
     test('.fromMap() should convert a DIDChainModel from map', () {
-      final didChain = DIDChainModel.fromMap(didChainExample);
+      final didChain = DIDChainModel.fromMap(httpDidChainExample);
       expect(didChain.didChain, isNotEmpty);
-      expect(didChain.toMap(), equals(didChainExample));
+      expect(didChain.toMap(), equals(httpDidChainExample));
+    });
+
+    test('.fromDIDChain() should build a DIDChainModel from a serialized Rust DIDChain struct', () {
+      final didChain = DIDChainModel.fromDIDChain(didChainExample);
+      expect(didChain.didChain, isNotEmpty);
     });
   });
 

@@ -1,4 +1,4 @@
-import 'package:trustchain_dart/trustchain_dart.dart';
+import 'package:trustchain_dart/src/credentials/credential.dart';
 import 'package:test/test.dart';
 
 void credentialsTest () {

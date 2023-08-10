@@ -14,6 +14,15 @@ class DIDChainModel {
     );
   }
 
+  factory DIDChainModel.fromDIDChain(Map<String, dynamic> data) {
+    assert(data.containsKey('did_map'));
+    return DIDChainModel(
+      didChain: data['did_map']!.values.map<DIDModel>((val) {
+      return DIDModel.fromMap({"didDocument" : val[0], "didDocumentMetadata": val[1]});
+          }).toList()
+    );
+  }  
+
   Map<String, dynamic> toMap() =>
       {'didChain': didChain.map((m) => m.toMap()['data']).toList()};
 }

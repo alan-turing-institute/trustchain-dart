@@ -1,17 +1,17 @@
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 
-abstract class UiConstraints {
-  const UiConstraints();
+// abstract class UiConstraints {
+//   const UiConstraints();
 
-  EdgeInsets get buttonPadding;
+//   EdgeInsets get buttonPadding;
 
-  BorderRadius get buttonRadius;
+//   BorderRadius get buttonRadius;
 
-  EdgeInsets get navBarPadding;
+//   EdgeInsets get navBarPadding;
 
-  BorderRadius get navBarRadius;
+//   BorderRadius get navBarRadius;
 
-  EdgeInsets get textFieldPadding;
+//   EdgeInsets get textFieldPadding;
 
-  BorderRadius get textFieldRadius;
-}
+//   BorderRadius get textFieldRadius;
+// }
