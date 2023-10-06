@@ -1,16 +1,9 @@
-import 'package:trustchain_dart/trustchain_dart.dart';
-import 'package:test/test.dart';
+import './did.dart';
+import './credentials.dart';
+import './chain.dart';
 
 void main() {
-  group('A group of tests', () {
-    final awesome = Awesome();
-
-    setUp(() {
-      // Additional setup goes here.
-    });
-
-    test('First Test', () {
-      expect(awesome.isAwesome, isTrue);
-    });
-  });
+  credentialsTest();
+  didTest();
+  chainTest();
 }
